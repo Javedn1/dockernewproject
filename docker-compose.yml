@@ -1,25 +1,25 @@
 version: '3'
 services:
-  movies:
-    image: nabeelj97/paytmappmovies:latest
+  movies: nabeelj97/moviespaytm:latest
+    image: 
     ports:
       - "81:80"
     deploy:
       replicas: 3
   train:
-    image: nabeelj97/paytmapptrain:latest
+    image: nabeelj97/trainpaytm:latest
     ports:
       - "82:80"
     deploy:
       replicas: 3
   dth:
-    image: nabeelj97/paytmappdth:latest
+    image: nabeelj97/dthpaytm:latest
     ports:
       - "83:80"
     deploy:
       replicas: 3
   recharge:
-    image: nabeelj97/paytmapprecharge:latest
+    image: nabeelj97/rechargepaytm:latest
     ports:
       - "84:80"
     deploy:
