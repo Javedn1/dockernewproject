@@ -3,24 +3,24 @@ services:
   movies:
     image: nabeelj97/paytmappmovies:latest
     ports:
-      - "90:80"
+      - "81:80"
     deploy:
       replicas: 3
   train:
     image: nabeelj97/paytmapptrain:latest
     ports:
-      - "91:80"
+      - "82:80"
     deploy:
       replicas: 3
   dth:
     image: nabeelj97/paytmappdth:latest
     ports:
-      - "92:80"
+      - "83:80"
     deploy:
       replicas: 3
   recharge:
     image: nabeelj97/paytmapprecharge:latest
     ports:
-      - "93:80"
+      - "84:80"
     deploy:
       replicas: 3
