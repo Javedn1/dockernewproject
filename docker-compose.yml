@@ -3,24 +3,24 @@ services:
   movies: nabeelj97/moviespaytm:latest
     image: 
     ports:
-      - "81:80"
+      - "90:80"
     deploy:
       replicas: 3
   train:
     image: nabeelj97/trainpaytm:latest
     ports:
-      - "82:80"
+      - "91:80"
     deploy:
       replicas: 3
   dth:
     image: nabeelj97/dthpaytm:latest
     ports:
-      - "83:80"
+      - "92:80"
     deploy:
       replicas: 3
   recharge:
     image: nabeelj97/rechargepaytm:latest
     ports:
-      - "84:80"
+      - "93:80"
     deploy:
       replicas: 3
