@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/MySQL
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=cont3
+      - MYSQL_DATABASE=cont3
+      - MYSQL_USER=cont3
+      - MYSQL_PASSWORD=cont3
+    expose:
+      - 3306
+      - 33060
+  trainpaytm:
+    image: trainpaytm:latest
+    volumes:
+      - ab_data:/var/www/html
+    ports:
+      - 89:80
+    restart: always
+    environment:
+      - ADDBOOK_DB_HOST=db
+      - ADDBOOK_DB_USER=cont3
+      - ADDBOOK_DB_PASSWORD=cont3
+      - ADDBOOK_DB_NAME=cont3
+volumes:
+  db_data:
+  ab_data:
